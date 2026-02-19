@@ -9,3 +9,12 @@ test("writting test case to find test",() => {
 
   expect(text).toBeInTheDocument();
 })
+
+test("writting test case to find test1",() => {
+
+  render(<App/>);
+
+  const text = screen.getByText(/First /i);
+
+  expect(text).toBeInTheDocument();
+})
