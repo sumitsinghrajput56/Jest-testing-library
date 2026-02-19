@@ -14,7 +14,7 @@ test("writting test case to find some text",() => {
 
   render(<App/>);
 
-  const text = screen.getByText(/First /i);
+  const text = screen.getByText(/first/i);
 
   expect(text).toBeInTheDocument();
 })
@@ -26,4 +26,18 @@ test("writting test case to find title",() => {
   const title = screen.getByTitle("zomato");
 
   expect(title).toBeInTheDocument();
+})
+
+test("test input box",() => {
+
+  render(<App/>);
+
+  const textInput = screen.getByRole("textbox");
+  expect(textInput).toBeInTheDocument();
+
+  const placeholderInput = screen.getByPlaceholderText("input your name");
+  expect(placeholderInput).toBeInTheDocument();
+
+  expect(textInput).toHaveAttribute("name","your name");
+  expect(textInput).toHaveAttribute("type","text");
 })
