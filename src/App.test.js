@@ -43,17 +43,17 @@ describe("UI test cases group", () => {
     render(<App />);
     const textInput = screen.getByRole("textbox");
     expect(textInput).toHaveAttribute("name", "your name");
-  })
-    test("test case 2", () => {
+  });
+  test("test case 2", () => {
     render(<App />);
     const textInput = screen.getByRole("textbox");
     expect(textInput).toHaveAttribute("name", "your name");
-  })
-    test("test case 3", () => {
+  });
+  test("test case 3", () => {
     render(<App />);
     const textInput = screen.getByRole("textbox");
     expect(textInput).toHaveAttribute("name", "your name");
-  })
+  });
 });
 
 describe("Api test cases group", () => {
@@ -61,15 +61,22 @@ describe("Api test cases group", () => {
     render(<App />);
     const textInput = screen.getByRole("textbox");
     expect(textInput).toHaveAttribute("name", "your name");
-  })
-    test("test case 2", () => {
+  });
+  test("test case 2", () => {
     render(<App />);
     const textInput = screen.getByRole("textbox");
     expect(textInput).toHaveAttribute("name", "your name");
-  })
-    test("test case 3", () => {
+  });
+  test("test case 3", () => {
     render(<App />);
     const textInput = screen.getByRole("textbox");
     expect(textInput).toHaveAttribute("name", "your name");
-  })
+  });
+  describe("inner describe test cases group", () => {
+    test("test case 1", () => {
+      render(<App />);
+      const textInput = screen.getByRole("textbox");
+      expect(textInput).toHaveAttribute("name", "your name");
+    });
+  });
 });
