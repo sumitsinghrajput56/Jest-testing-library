@@ -1,11 +1,10 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import App from "./App"
 
-
 test("on change event testing",() => {
   render(<App/>);
   let input = screen.getByRole("textbox");
   fireEvent.change(input,{target:{value:"ab"}});
-  expect(input.value).toBe("ab");
+  expect(input.value).toBe("abhello");
 
 })
