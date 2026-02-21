@@ -1,7 +1,7 @@
-import { render } from "@testing-library/react";
-import App from "./App";
+import Users from "./Users";
 
-test("snapshot for app component", () => {
-  const { container } = render(<App />);
-  expect(container).toMatchSnapshot();
+test("class component method testing", () => {
+  const instance = new Users();
+  const a = "test";
+  expect(instance.getUserList(a)).toBe(a);
 });
