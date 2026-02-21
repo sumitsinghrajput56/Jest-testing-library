@@ -7,7 +7,7 @@ function App() {
   const [data,setData] = useState("");
   return (
     <div className="App">
-      <h1>Test click Event with button</h1>
+      <h1>SnapShots testing</h1>
       <button onClick={()=>setData("update data")}>Update Data</button>
       <h1>{data}</h1>
     </div>

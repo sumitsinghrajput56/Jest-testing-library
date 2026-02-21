@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot for app component 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <h1>
+      SnapShots testing
+    </h1>
+    <button>
+      Update Data
+    </button>
+    <h1 />
+  </div>
+</div>
+`;
