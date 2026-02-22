@@ -1,19 +1,17 @@
-import { render, screen } from "@testing-library/react"
-import App from "./App"
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test("getByRole testing", () => {
+test("getByRole", () => {
+  render(<App />);
 
-  render(<App/>);
-  const btn1 = screen.getByRole("button",{name:"Click 1"});
-  const btn2 = screen.getByRole("button",{name:"Click 2"});
-  const input1 = screen.getByRole("textbox",{name:"User Name"})
-  const input2 = screen.getByRole("textbox",{name:"User age"})
-  const dv1 = screen.getByRole("dummy");
+  const btns = screen.getAllByRole("button");
+  const options = screen.getAllByRole("option");
 
-  expect(btn1).toBeInTheDocument();
-  expect(btn2).toBeInTheDocument();
-  expect(input1).toBeInTheDocument();
-  expect(input2).toBeInTheDocument();
-  expect(dv1).toBeInTheDocument();
+  for (let i = 0; i < btns.length; i++) {
+    expect(btns[i]).toBeInTheDocument();
+  }
 
-})
+   for (let i = 0; i < options.length; i++) {
+    expect(options[i]).toBeInTheDocument();
+  }
+});
