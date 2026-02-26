@@ -1,19 +1,28 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-// test("test case for single input field", () => {
-//   render(<App />);
-//   const input = screen.getByPlaceholderText("enter username");
-//   expect(input).toBeInTheDocument();
-//   expect(input).toHaveValue("anil");
-// });
-
-test("test case for multiple input fields", () => {
+test("single button testing", () => {
   render(<App />);
-  const input = screen.getAllByPlaceholderText("enter username");
+  const btn = screen.getByText("Login");
+  expect(btn).toBeInTheDocument();
 
-  for (let i = 0; i < input.length; i++) {
-    expect(input[i]).toBeInTheDocument();
-    expect(input[i]).toHaveValue("anil");
+});
+
+test("p teg testing", () => {
+  render(<App />);
+  const btn = screen.getByText("p teg testing");
+  expect(btn).toBeInTheDocument();
+
+});
+
+test("multiple heading testing", () => {
+  render(<App />);
+  const h1Teg = screen.getAllByText("heading");
+
+  for(let i=0;i<h1Teg.length;i++)
+  {
+  expect(h1Teg[0]).toBeInTheDocument();
+
   }
+
 });
