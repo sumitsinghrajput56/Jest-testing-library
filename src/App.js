@@ -1,16 +1,10 @@
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-     <h1>RTL query : getByLabelText</h1>
-     <label htmlFor="user-name" >Username</label>
-     <input type="text" id="user-name" defaultValue="anil"/>
-     <br></br>
-
-     <label htmlFor="skills">Skills</label>
-     <input type="checkbox" id="skills" defaultChecked={true}/>
-     
+     <h1>RTL Query: ByPlacehlderText</h1>
+     <input type="text" placeholder="enter username" defaultValue={"anil"}/>
     </div>
   );
 }

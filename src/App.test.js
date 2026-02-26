@@ -1,20 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("getByLabelText test case 1", () => {
+test("test case for single input field", () => {
   render(<App />);
-
-  const input = screen.getByLabelText("Username");
+  const input = screen.getByPlaceholderText("enter username");
   expect(input).toBeInTheDocument();
   expect(input).toHaveValue("anil");
-
-});
-
-test("getByLabelText test case 2", () => {
-  render(<App />);
-
-  const input = screen.getByLabelText("Skills");
-  expect(input).toBeInTheDocument();
-  expect(input).toBeChecked("anil");
-
 });
