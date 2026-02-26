@@ -1,19 +1,12 @@
-import { render, screen } from "@testing-library/react";
+import { configure, render, screen } from "@testing-library/react";
 import App from "./App"
+configure({testIdAttribute:"element-id"})
 
 
-test("testing with test id",()=>{
+test("overriding data test-id",()=>{
   render(<App/>);
-  const divId = screen.getAllByTestId("div-test-id");
-  for(var i=0;i<divId.length;i++)
-  {
-  expect(divId[i]).toBeInTheDocument();
+  const divElement = screen.getByTestId("test-div");
+  expect(divElement).toBeInTheDocument();
 
-  }
 })
 
-test("testing with test id h1",()=>{
-  render(<App/>);
-  const divId = screen.getByTestId("div-test-id-h2");
-  expect(divId).toBeInTheDocument();
-})
