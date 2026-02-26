@@ -5,7 +5,7 @@ function App() {
     <div className="App">
      <h1>RTL Query: getByText and getAllByText</h1>
      <button>Login</button>
-     <p>p teg testing</p>
+     <p class="paraStyle">p teg testing</p>
      <h1>heading</h1>
      <h1>heading</h1>
     </div>
