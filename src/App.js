@@ -3,11 +3,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-     <h1>RTL Query: getByText and getAllByText</h1>
-     <button>Login</button>
-     <p class="paraStyle">p teg testing</p>
-     <h1>heading</h1>
-     <h1>heading</h1>
+      <h1>RTL Query: getByTestId and getAllByTestId</h1>
+      <div data-testid="div-test-id">testing with test id</div>
     </div>
   );
 }
