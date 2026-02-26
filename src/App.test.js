@@ -7,3 +7,9 @@ test("testing with test id",()=>{
   const divId = screen.getByTestId("div-test-id");
   expect(divId).toBeInTheDocument();
 })
+
+test("testing with test id h1",()=>{
+  render(<App/>);
+  const divId = screen.getByTestId("div-test-id-h2");
+  expect(divId).toBeInTheDocument();
+})
